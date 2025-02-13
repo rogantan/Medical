@@ -1,0 +1,103 @@
+﻿<Window x:Class="_10._02.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_10._02"
+        mc:Ignorable="d"
+        Title="МедТехСервис" Height="450" Width="800" >
+    <Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Ремонт медицинского оборудования" FontFamily="CamelCase" FontSize="20" HorizontalAlignment="Center"/>
+            <TabControl Grid.Row="1">
+                <TabItem Name="RequestsTab">
+                    <TabItem.Header>
+                        <TextBlock Text="Заявки" />
+                    </TabItem.Header>
+                    <TabItem.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Редактировать" />
+                            <MenuItem Header="Удалить" />
+                        </ContextMenu>
+                    </TabItem.ContextMenu>
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" />
+                            <DataGridTextColumn Header="ФИО клиента"/>
+                            <DataGridTextColumn Header="Тип оборудования"/>
+                            <DataGridTextColumn Header="Модуль оборудования"/>
+                            <DataGridTextColumn Header="ФИО инженера"/>
+                            <DataGridTextColumn Header="Дата заявки"/>
+                            <DataGridTextColumn Header="Описание проблемы"/>
+                            <DataGridTextColumn Header="Статус"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+                <TabItem Name="ClientsTab">
+                    <TabItem.Header>
+                        <TextBlock Text="Клиенты" />
+                    </TabItem.Header>
+                    <TabItem.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Редактировать" />
+                            <MenuItem Header="Удалить" />
+                        </ContextMenu>
+                    </TabItem.ContextMenu>
+                    <DataGrid ItemsSource="{Binding Clients}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
+                            <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Отчество" Binding="{Binding Otchestvo}"/>
+                            <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+                <TabItem Name="EquipmentTab">
+                    <TabItem.Header>
+                        <TextBlock Text="Оборудования" />
+                    </TabItem.Header>
+                    <TabItem.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Редактировать"/>
+                            <MenuItem Header="Удалить"/>
+                        </ContextMenu>
+                    </TabItem.ContextMenu>
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id"/>
+                            <DataGridTextColumn Header="Тип"/>
+                            <DataGridTextColumn Header="Модель"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+                <TabItem Name="EngineersTab">
+                    <TabItem.Header>
+                        <TextBlock Text="Инженеры" />
+                    </TabItem.Header>
+                    <TabItem.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Редактировать"/>
+                            <MenuItem Header="Удалить" />
+                        </ContextMenu>
+                    </TabItem.ContextMenu>
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id"/>
+                            <DataGridTextColumn Header="Фамилия"/>
+                            <DataGridTextColumn Header="Имя"/>
+                            <DataGridTextColumn Header="Отчество"/>
+                            <DataGridTextColumn Header="Должность"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+        
+    </Border>
+</Window>
