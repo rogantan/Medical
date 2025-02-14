@@ -21,7 +21,7 @@ namespace _10._02.Models.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-NMFVIJJ;Database=Medical;Trusted_Connection=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-NMFVIJJ;Database=medical;Trusted_Connection=True;TrustServerCertificate=True;");
         }
 
         private static MyDatabase? instance;

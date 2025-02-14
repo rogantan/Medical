@@ -25,16 +25,17 @@
                             <MenuItem Header="Удалить" />
                         </ContextMenu>
                     </TabItem.ContextMenu>
-                    <DataGrid>
+                    <DataGrid ItemsSource="{Binding Requests}" AutoGenerateColumns="False" CanUserResizeColumns="False" IsReadOnly="True">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" />
-                            <DataGridTextColumn Header="ФИО клиента"/>
-                            <DataGridTextColumn Header="Тип оборудования"/>
-                            <DataGridTextColumn Header="Модуль оборудования"/>
-                            <DataGridTextColumn Header="ФИО инженера"/>
-                            <DataGridTextColumn Header="Дата заявки"/>
-                            <DataGridTextColumn Header="Описание проблемы"/>
-                            <DataGridTextColumn Header="Статус"/>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="Фамилия клиента" Binding="{Binding Client.LastName}"/>
+                            <DataGridTextColumn Header="Имя клиента" Binding="{Binding Client.Name}"/>
+                            <DataGridTextColumn Header="Тип оборудования" Binding="{Binding Equipment.Type}"/>
+                            <DataGridTextColumn Header="Модель оборудования" Binding="{Binding Equipment.Model}"/>
+                            <DataGridTextColumn Header="ФИО инженера" Binding="{Binding Engineer.LastName}"/>
+                            <DataGridTextColumn Header="Дата заявки" Binding="{Binding Date}"/>
+                            <DataGridTextColumn Header="Описание проблемы" Binding="{Binding Description}"/>
+                            <DataGridTextColumn Header="Статус" Binding="{Binding Status}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>
@@ -48,7 +49,7 @@
                             <MenuItem Header="Удалить" />
                         </ContextMenu>
                     </TabItem.ContextMenu>
-                    <DataGrid ItemsSource="{Binding Clients}">
+                    <DataGrid ItemsSource="{Binding Clients}" AutoGenerateColumns="False" CanUserResizeColumns="False" IsReadOnly="True">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
                             <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
@@ -68,11 +69,11 @@
                             <MenuItem Header="Удалить"/>
                         </ContextMenu>
                     </TabItem.ContextMenu>
-                    <DataGrid>
+                    <DataGrid ItemsSource="{Binding Equipments}" AutoGenerateColumns="False" CanUserResizeColumns="False" IsReadOnly="True">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id"/>
-                            <DataGridTextColumn Header="Тип"/>
-                            <DataGridTextColumn Header="Модель"/>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="Тип" Binding="{Binding Type}"/>
+                            <DataGridTextColumn Header="Модель" Binding="{Binding Model}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>
@@ -86,13 +87,13 @@
                             <MenuItem Header="Удалить" />
                         </ContextMenu>
                     </TabItem.ContextMenu>
-                    <DataGrid>
+                    <DataGrid ItemsSource="{Binding Engineers}" AutoGenerateColumns="False" CanUserResizeColumns="False" IsReadOnly="True">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id"/>
-                            <DataGridTextColumn Header="Фамилия"/>
-                            <DataGridTextColumn Header="Имя"/>
-                            <DataGridTextColumn Header="Отчество"/>
-                            <DataGridTextColumn Header="Должность"/>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
+                            <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Отчество" Binding="{Binding Otchestvo}"/>
+                            <DataGridTextColumn Header="Должность" Binding="{Binding Dolzhnost}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>

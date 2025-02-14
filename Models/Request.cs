@@ -12,7 +12,7 @@ namespace _10._02.Models
         public Client Client { get; set; }
         public Equipment Equipment { get; set; }
         public Engineer Engineer { get; set; }
-        public DateTime Date = DateTime.Now;
+        public DateTime Date {  get; set; }
         public string Description { get; set; }
         public string Status { get; set; }
     }
