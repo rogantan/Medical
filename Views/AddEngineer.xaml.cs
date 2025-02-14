@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace _10._02.Views
 {
     /// <summary>
-    /// Interaction logic for AddClient.xaml
+    /// Interaction logic for AddEngineer.xaml
     /// </summary>
-    public partial class AddClient : Window
+    public partial class AddEngineer : Window
     {
-        public AddClient()
+        public AddEngineer()
         {
             InitializeComponent();
         }
