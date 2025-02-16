@@ -1,0 +1,26 @@
+﻿<Window x:Class="_10._02.Views.AddEquipmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_10._02.Views"
+        mc:Ignorable="d"
+        Title="Новое оборудование" Height="220" Width="220" ResizeMode="NoResize">
+    <Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Введите тип оборудования" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="CamelCase" />
+            <TextBox Grid.Row="1" Text="{Binding LastName}" FontFamily="CamelCase" FontSize="20"/>
+            <TextBlock Grid.Row="2" Text="Введите модель оборудования" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="CamelCase"/>
+            <TextBox Grid.Row="3" Text="{Binding Name}" FontFamily="CamelCase" FontSize="20"/>
+            <Button Grid.Row="7" Width="70" Content="Сохранить" Margin="20,0,121,0" Command="{Binding SaveClientCommand}"/>
+            <Button Grid.Row="7" Width="70" Margin="100,0,12,0" Content="Отмена" Command="{Binding CancelCommand}"/>
+        </Grid>
+    </Border>
+</Window>

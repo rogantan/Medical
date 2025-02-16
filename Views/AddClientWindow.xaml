@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_10._02.Views"
         mc:Ignorable="d"
-        Title="Новый клиент" Height="300" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Новый клиент" Height="320" Width="320" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Border>
         <Grid>
             <Grid.RowDefinitions>
@@ -20,14 +20,14 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Text="Введите фамилию" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="CamelCase" />
-            <TextBox Grid.Row="1" Text="{Binding LastName}" FontFamily="CamelCase" FontSize="25"/>
+            <TextBox Grid.Row="1" Text="{Binding LastName}" FontFamily="CamelCase" FontSize="20"/>
             <TextBlock Grid.Row="2" Text="Введите имя" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="CamelCase"/>
-            <TextBox Grid.Row="3" Text="{Binding Name}" FontFamily="CamelCase" FontSize="25"/>
+            <TextBox Grid.Row="3" Text="{Binding Name}" FontFamily="CamelCase" FontSize="20"/>
             <TextBlock Grid.Row="4" Text="Введите отчество" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="CamelCase"/>
-            <TextBox Grid.Row="5" Text="{Binding Otchestvo}" FontFamily="CamelCase" FontSize="25"/>
+            <TextBox Grid.Row="5" Text="{Binding Otchestvo}" FontFamily="CamelCase" FontSize="20"/>
             <TextBlock Grid.Row="6" Text="Введите номер телефона" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="CamelCase"/>
-            <TextBox Grid.Row="7" Text="{Binding Phone}" FontFamily="CamelCase" FontSize="25"/>
-            <Button Grid.Row="8" Width="100" Content="Сохранить" Margin="19,0,181,0"/>
+            <TextBox Grid.Row="7" Text="{Binding Phone}" FontFamily="CamelCase" FontSize="20"/>
+            <Button Grid.Row="8" Width="100" Content="Сохранить" Margin="19,0,181,0" Command="{Binding SaveClientCommand}"/>
             <Button Grid.Row="8" Width="100" Margin="180,0,20,0" Content="Отмена" Command="{Binding CancelCommand}"/>
         </Grid>
     </Border>

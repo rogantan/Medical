@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,14 +7,99 @@ using System.Threading.Tasks;
 
 namespace _10._02.Models
 {
-    class Engineer
+    class Engineer : NotifyProperty
     {
-        public int Id { get; set; }
-        public string LastName { get; set; }
-        public string Name { get; set; }
-        public string Otchestvo { get; set; }
-        public string Dolzhnost {  get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
+        private int _id;
+        private string _lastname;
+        private string _name;
+        private string _otchestvo;
+        private string _dolzhnost;
+        private string _login;
+        private string _password;
+
+        public int Id
+        {
+            get => _id;
+            set
+            {
+                if (_id != value)
+                {
+                    _id = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        public string LastName
+        {
+            get => _lastname;
+            set
+            {
+                if (_lastname != value)
+                {
+                    _lastname = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                if (_name != value)
+                {
+                    _name = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        public string Otchestvo
+        {
+            get => _otchestvo;
+            set
+            {
+                if (_otchestvo != value)
+                {
+                    _otchestvo = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        public string Dolzhnost
+        {
+            get => _dolzhnost;
+            set
+            {
+                if (_dolzhnost != value)
+                {
+                    _dolzhnost = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        public string Login
+        {
+            get => _login;
+            set
+            {
+                if (_login != value)
+                {
+                    _login = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        public string Password
+        {
+            get => _password;
+            set
+            {
+                if (_password != value)
+                {
+                    _password = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
     }
 }

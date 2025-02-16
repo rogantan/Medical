@@ -21,10 +21,12 @@ namespace _10._02.ViewModels
         public ObservableCollection<Equipment> Equipments { get => db.Equipments.Local.ToObservableCollection(); }  
 
         public RelayCommand AddClientCommand {  get; set; }
+        public RelayCommand AddEquipmentCommand { get; set; }
 
         public MainWindowViewModel()
         {
             AddClientCommand = new RelayCommand(AddClient);
+            AddEquipmentCommand = new RelayCommand(AddEquipment);
         }
         
 
@@ -32,6 +34,12 @@ namespace _10._02.ViewModels
         {
             AddClientWindow addClientWindow = new AddClientWindow();
             addClientWindow.ShowDialog();
+        }
+
+        void AddEquipment(object o)
+        {
+            AddEquipmentWindow addEquipmentWindow = new AddEquipmentWindow();
+            addEquipmentWindow.ShowDialog();
         }
     }
 }
